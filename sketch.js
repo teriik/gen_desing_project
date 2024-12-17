@@ -677,10 +677,7 @@ let rules = { X: "XFA" }
 ///////////////////////////////////////////
 
 
-function setup() {
-
-  // frameRate(30);
-  // console.profile('setup');
+function preload(){
   canvasScale = windowHeight * scaleMult;
   branchWidth /= canvasScale;
 
@@ -689,6 +686,10 @@ function setup() {
   backgroundColor = color(230, 70, 60);
 
   minSmallPlantSpacing *= canvasScale;
+
+}
+
+function setup() {
 
   // check if the plant are defined correctly
   for (let i = 0; i < plantSettings.length; i++) {
@@ -891,25 +892,6 @@ function draw() {
 }
 
 function mouseClicked() {
-  drawBackground();
-  // console.log('-------------------')
-  for (let lSystem of trees) {
-    lSystem.generate();
-    // let time = millis();
-    lSystem.draw();
-  }
-
-  drawGround();
-
-  // saveCanvas('forest' + "_" + str(millis()), 'png');
-
-  // let sentence = ""
-  //   for (let s of lSystem.sentence.iter()){
-  //     console.log(`${s.symbol} ${s.transformIn.position}, ${s.transformOut.position}`)
-
-  //     sentence += s.symbol
-  // }
-  // console.log(sentence);
-  // console.log(lSystem.age + " iter " + str(round(millis() - time, 0), 2) + " ms");
-
+    trees = [];
+    setup();
 }
