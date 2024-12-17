@@ -525,7 +525,7 @@ let plants = [];
 let landscapeCenter;
 
 // landscape
-const scaleMult = 0.008 //0.005
+const scaleMult = 0.005 //0.008
 let canvasScale;
 const groundHeight = 20;
 
@@ -603,7 +603,7 @@ const tree = {
   angle: 27,
   leafSize: 5,
   // iter: 7,
-  iter: 6,
+  iter: 7,
   "type": "high",
   branchWidthScale: 0.6,
   colorShift: [0, -5, 0, -3],
