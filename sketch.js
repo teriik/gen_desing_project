@@ -892,6 +892,7 @@ function draw() {
 }
 
 function mouseClicked() {
-    trees = [];
-    setup();
+    // trees = [];
+    // setup();
+  location.reload();
 }
